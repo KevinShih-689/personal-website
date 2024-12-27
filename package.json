@@ -12,7 +12,7 @@
     "build-storybook": "storybook build",
     "prepare": "husky",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
     "next": "14.2.21",
@@ -43,8 +43,8 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
+      "prettier --write \"src/**/*.{ts,tsx}\"",
+      "eslint --fix \"src/**/*.{ts,tsx}\""
     ]
   }
 }
