@@ -5,6 +5,29 @@
     "plugin:storybook/recommended"
   ],
   "rules": {
-    "react/no-unescaped-entities": "warn"
+    "react/no-unescaped-entities": "warn",
+    "semi": ["warn", "always"],
+    "prefer-const": "warn",
+    "quotes": ["warn", "single"],
+    "no-unused-vars": ["warn"],
+    "eqeqeq": ["warn"],
+    "arrow-parens": ["warn", "always"],
+    "space-before-function-paren": ["warn", "always"],
+    "no-trailing-spaces": ["warn"],
+    "eol-last": ["warn", "always"],
+    "no-var": ["warn"],
+    "array-bracket-spacing": ["warn", "never"],
+    "block-spacing": ["warn", "always"],
+    "keyword-spacing": ["warn", { "before": true, "after": true }],
+    "space-infix-ops": ["warn"],
+    "no-multiple-empty-lines": ["warn", { "max": 1 }],
+    "max-len": ["warn", { "code": 120 }],
+    "no-shadow": ["warn"],
+    "prefer-arrow-callback": ["warn"],
+    "consistent-return": ["warn"],
+    "no-duplicate-imports": ["warn"],
+    "no-redeclare": ["warn"],
+    "no-param-reassign": ["warn"],
+    "curly": ["warn", "all"]
   }
 }
