@@ -1,12 +1,20 @@
+@import "@/app/style.module.css";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--background-light);
+  --foreground: var(--gray-900);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--background-dark);
+    --foreground: var(--gray-50);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
   }
 }
 
@@ -16,6 +24,7 @@ body {
   overflow-x: hidden;
 }
 
+/*TODO: 指定字體 */
 body {
   color: var(--foreground);
   background: var(--background);
@@ -30,13 +39,9 @@ body {
   margin: 0;
 }
 
+/*TODO: 定義標題樣式 */
+
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
