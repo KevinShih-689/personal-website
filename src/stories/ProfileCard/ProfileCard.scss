@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+.profile_card {
+    @include common-padding();
+    @include common-border();
+    @include common-margin();
+    background-color: $gray-200;
+    color: $text-primary;
+    max-width: 400px;
+    width: 100%;
+    aspect-ratio: 1/0.56;
+}

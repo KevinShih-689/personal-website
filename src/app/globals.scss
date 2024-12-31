@@ -1,14 +1,14 @@
-@import "@/app/style.module.css";
+@import "variables.scss";
 
 :root {
-  --background: var(--background-light);
-  --foreground: var(--gray-900);
+  --background: #{$background-light};
+  --foreground: #{$gray-900};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--background-dark);
-    --foreground: var(--gray-50);
+    --background: #{$background-dark};
+    --foreground: #{$gray-50};
   }
 }
 

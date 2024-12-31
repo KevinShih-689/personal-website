@@ -1,3 +1,10 @@
+import ProfileCard from '@components/ProfileCard/ProfileCard';
+import styles from './page.module.scss';
+
 export default function Home () {
-  return <div></div>;
+  return (
+    <div className={styles.home}>
+      <ProfileCard />
+    </div>
+  );
 }
