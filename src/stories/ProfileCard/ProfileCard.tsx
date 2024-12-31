@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react';
 import './ProfileCard.scss';
-import styles from '@app/variables.scss';
 
 export interface ProfileCardProps {
   /** List of social media links */
@@ -27,8 +26,6 @@ export interface ProfileCardProps {
 /** Primary UI component for user interaction */
 export default function ProfileCard ({ name }: ProfileCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
-
-  console.log(styles);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;

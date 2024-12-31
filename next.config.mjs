@@ -7,7 +7,10 @@ const __dirname = path.dirname(__filename);
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     sassOptions: {
-        includePaths: [path.join(__dirname, 'src/app')],
+        includePaths: [
+            path.join(__dirname, 'src/app'),
+            path.join(__dirname, 'src/stories')
+        ],
     },
 
 };
