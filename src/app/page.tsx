@@ -3,7 +3,9 @@
 import ProfileCard from '@components/ProfileCard/ProfileCard';
 import IconButton from '@components/IconButton/IconButton';
 import styles from './page.module.scss';
-import DownloadIcon from '@icons/download.svg';
+import GithubIcon from '@icons/github.svg';
+import LinkedInIcon from '@icons/linkedIn.svg';
+import CakeResumeIcon from '@icons/cakeResume.svg';
 
 export default function Home () {
   return (
@@ -14,8 +16,27 @@ export default function Home () {
           console.log('download');
         }}
         color="primary"
+        size="medium"
       >
-        <DownloadIcon fill="currentColor" />
+        <GithubIcon fill="currentColor" />
+      </IconButton>
+      <IconButton
+        onClick={() => {
+          console.log('send');
+        }}
+        color="primary"
+        size="medium"
+      >
+        <LinkedInIcon fill="currentColor" />
+      </IconButton>
+      <IconButton
+        onClick={() => {
+          console.log('send');
+        }}
+        color="primary"
+        size="medium"
+      >
+        <CakeResumeIcon fill="currentColor" />
       </IconButton>
     </div>
   );

@@ -24,8 +24,8 @@
     background-color: unset;
     border: unset;
     svg {
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
     }
     &:disabled {
         opacity: 0.5;
