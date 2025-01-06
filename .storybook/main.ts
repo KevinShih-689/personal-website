@@ -14,6 +14,9 @@ const config: StorybookConfig = {
     options: {},
   },
   webpackFinal: async (config:any) => {
+    config.module = config.module || {};
+    config.module.rules = config.module.rules || [];
+
     config.module.rules.push({
       test: /\.scss$/,
       use: [
@@ -32,6 +35,15 @@ const config: StorybookConfig = {
         }
       ],
       include: path.resolve(__dirname, '../app')
+    });
+
+    const fileLoaderRule = config.module.rules.find(
+      (rule) => rule.test && rule.test.test('.svg'),
+    );
+    fileLoaderRule.exclude = /\.svg$/;
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
     });
 
     return config;

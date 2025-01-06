@@ -90,30 +90,26 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 @mixin common-action($type: 'info') {
-    $color: $info;
-    $hover: $info-hover;
-    $active: $info-active;
-    $selected: $info-selected;
-    $focus: $info-focus;
+    $color: $text-primary;
+    $hover: rgba($text-primary, 0.08);
+    $active: rgba($text-primary, 0.16);
 
-    @if $type == 'success' {
+    @if $type == 'primary' {
+        $color: $info;
+        $hover: $info-hover;
+        $active: $info-active;
+    } @else if $type == 'success' {
         $color: $success;
         $hover: $success-hover;
         $active: $success-active;
-        $selected: $success-selected;
-        $focus: $success-focus;
     } @else if $type == 'warning' {
         $color: $warning;
         $hover: $warning-hover;
         $active: $warning-active;
-        $selected: $warning-selected;
-        $focus: $warning-focus;
     } @else if $type == 'error' {
         $color: $error;
         $hover: $error-hover;
         $active: $error-active;
-        $selected: $error-selected;
-        $focus: $error-focus;
     }
 
     color: $color;
@@ -127,15 +123,6 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
     &:active {
         background-color: $active;
-    }
-
-    &.selected {
-        background-color: $selected;
-    }
-
-    &:focus {
-        background-color: $focus;
-        outline: none;
     }
 }
 

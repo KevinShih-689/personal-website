@@ -1,0 +1,55 @@
+@use "variables.module.scss" as *;
+
+.success {
+    @include common-action('success');
+}
+.info {
+    @include common-action('info');
+}
+.warning {
+    @include common-action('warning');
+}
+.error {
+    @include common-action('error');
+}
+.primary {
+    @include common-action('primary');
+}
+.icon_button {
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: unset;
+    border: unset;
+    svg {
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+    }
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+.large {
+    width: 32px;
+    height: 32px;
+    &:hover {
+        border-radius: 16px;
+    }
+}
+.medium {
+    width: 24px;
+    height: 24px;
+    &:hover {
+        border-radius: 12px;
+    }
+}
+.small {
+    width: 16px;
+    height: 16px;
+    &:hover {
+        border-radius: 8px;
+    }
+}
