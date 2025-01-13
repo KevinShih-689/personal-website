@@ -1,0 +1,16 @@
+@use "variables.module.scss" as *;
+
+.profile_card {
+    @include common-padding();
+    @include common-border();
+    @include common-margin();
+    background-color: $gray-200;
+    color: $text-primary;
+    max-width: 800px;
+    width: 100%;
+    aspect-ratio: 1/0.56;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

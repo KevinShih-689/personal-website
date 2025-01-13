@@ -14,9 +14,13 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@jdion/tilt-react": "^1.0.0",
+    "css-loader": "^7.1.2",
     "next": "14.2.21",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.3",
@@ -27,6 +31,7 @@
     "@storybook/nextjs": "^8.4.7",
     "@storybook/react": "^8.4.7",
     "@storybook/test": "^8.4.7",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -37,7 +42,9 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
     "prettier": "^3.4.2",
+    "sass": "^1.83.0",
     "storybook": "^8.4.7",
+    "storybook-css-modules": "^1.0.8",
     "typescript": "^5"
   },
   "lint-staged": {

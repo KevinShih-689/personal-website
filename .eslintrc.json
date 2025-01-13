@@ -38,7 +38,6 @@
     "consistent-return": ["warn"],
     "no-duplicate-imports": ["warn"],
     "no-redeclare": ["warn"],
-    "no-param-reassign": ["warn"],
-    "curly": ["warn", "all"]
+    "no-param-reassign": ["warn"]
   }
 }
