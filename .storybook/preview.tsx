@@ -16,9 +16,8 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
         enableSystem
+        disableTransitionOnChange
       >
         <Story />
       </ThemeProvider>
