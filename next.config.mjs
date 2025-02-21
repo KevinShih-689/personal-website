@@ -1,5 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+import withPlaiceholder from '@plaiceholder/next';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -42,8 +43,14 @@ const nextConfig = {
                 pathname: '/src/stories/assets/**',
                 search: ''
             }
+        ],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**',
+            }
         ]
     }
 };
 
-export default nextConfig;
+export default withPlaiceholder(nextConfig);

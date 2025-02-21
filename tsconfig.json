@@ -21,7 +21,10 @@
     "paths": {
       "@components/*": ["stories/*"],
       "@app/*": ["app/*"],
-      "@icons/*": ["../public/icons/*"]
+      "@icons/*": ["../public/icons/*"],
+      "@middleware/*": ["middleware/*"],
+      "@lib/*": ["lib/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": [

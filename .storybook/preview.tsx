@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { Preview } from "@storybook/react";
 import { ThemeProvider } from "next-themes";
+import './global.scss';
 import '../src/app/variables.module.scss';
 import '../src/app/globals.scss';
 

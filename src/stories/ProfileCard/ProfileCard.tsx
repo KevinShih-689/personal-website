@@ -1,6 +1,4 @@
-'use client';
-
-import React from 'react';
+import * as React from 'react';
 import { Tilt } from '@jdion/tilt-react';
 import styles from './ProfileCard.module.scss';
 import ProfileCardProps from './ProfileCard.types';

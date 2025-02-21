@@ -4,8 +4,8 @@
     @include common-padding();
     @include common-border();
     @include common-margin();
-    background-color: $gray-200;
-    color: $text-primary;
+    background-color: $secondary-lightest;
+    color: $primary-lightest;
     max-width: 800px;
     width: 100%;
     aspect-ratio: 1/0.56;
@@ -13,4 +13,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    :global {
+        [data-theme='dark'] & {
+            background-color: $gray-200;
+            color: $text-primary;
+        }
+    }
 }

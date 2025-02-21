@@ -1,0 +1,11 @@
+@use "variables.module.scss" as *;
+
+.photo {
+    border-radius: 50%;
+    background-color: $gray-200;
+    :global {
+        [data-theme='dark'] & {
+            background-color: $secondary-lightest;
+        }
+    }
+}

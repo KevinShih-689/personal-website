@@ -6,7 +6,7 @@ const meta = {
   title: 'Data Display/ProfileCard',
   component: ProfileCard,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
   argTypes: {
