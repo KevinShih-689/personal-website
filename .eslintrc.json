@@ -18,7 +18,6 @@
       "ignoreTemplateLiterals": true
     }],
     "react/no-unescaped-entities": "warn",
-    "semi": ["warn", "always"],
     "prefer-const": "warn",
     "quotes": ["warn", "single"],
     "no-unused-vars": ["warn"],

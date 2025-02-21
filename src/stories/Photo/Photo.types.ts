@@ -5,4 +5,4 @@ export default interface PhotoProps extends React.HTMLAttributes<HTMLImageElemen
   src: string | StaticImageData;
   /** Profile picture alt text */
   alt: string;
-};;;;;;;;;;
+}
