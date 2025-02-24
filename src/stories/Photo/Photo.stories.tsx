@@ -20,6 +20,7 @@ export const Primary: Story = {
   },
 };
 
+//TODO: 靜態導入 with width and height
 export const RemoteImage: Story = {
   args: {
     src: 'https://avatars.githubusercontent.com/u/78122777?s=80&u=7675d6714c1d4fa2be2270c7c397a675842fc274&v=4',
@@ -27,9 +28,14 @@ export const RemoteImage: Story = {
   },
 };
 
+//TODO: 動態導入 with width and height
 export const LocalImage: Story = {
   args: {
     src: '/icons/github.svg',
     alt: 'Github icon',
   },
 };
+
+//TODO: 動態導入 with fill
+
+//TODO: 靜態導入 with fill

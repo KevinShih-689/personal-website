@@ -1,13 +1,28 @@
-import { getPlaiceholder } from 'plaiceholder';
-// import imageInstance from '@middleware/imageInstance';
+import { getPlaiceholder, GetPlaiceholderReturn } from 'plaiceholder';
+import imageInstance from '@middleware/imageInstance';
 
-export const getImage = async (src: string) => {
-  const buffer = await fetch(src).then(async (res) => Buffer.from(await res.arrayBuffer()));
+type GetImageType = {
+  /**
+   * The source of the image
+   */
+  src: string;
+};
+
+type ImageResponse = GetPlaiceholderReturn & {
+  img: {
+    src: string;
+    height: number;
+    width: number;
+  };
+};
+
+export const getImage = async ({ src }: GetImageType): Promise<ImageResponse> => {
+  const buffer = await imageInstance.get(src).then(async (res) => Buffer.from(await res.data));
+  const plaiceholder = await getPlaiceholder(buffer, { size: 10 });
 
   const {
     metadata: { height, width },
-    ...plaiceholder
-  } = await getPlaiceholder(buffer, { size: 10 });
+  } = plaiceholder;
 
   return {
     ...plaiceholder,
