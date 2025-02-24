@@ -4,6 +4,7 @@ import { Tilt } from '@jdion/tilt-react';
 import styles from './ProfileCard.module.scss';
 import ProfileCardProps from './ProfileCard.types';
 
+//TODO: 不用拆成 component
 /** Primary UI component for user interaction */
 export default function ProfileCard ({}: ProfileCardProps) {
   return (
