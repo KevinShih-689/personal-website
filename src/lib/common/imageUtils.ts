@@ -1,17 +1,16 @@
 import { getPlaiceholder } from 'plaiceholder';
-import imageInstance from '@middleware/imageInstance';
+// import imageInstance from '@middleware/imageInstance';
 
-export const getBlurDataURL = async (src: string): Promise<string> => {
-  try {
-    const imageResponse = await imageInstance.get(src);
-    const buffer = Buffer.from(imageResponse.data);
+export const getImage = async (src: string) => {
+  const buffer = await fetch(src).then(async (res) => Buffer.from(await res.arrayBuffer()));
 
-    const { base64 } = await getPlaiceholder(buffer);
-    console.log('🚀 ~ getBlurDataURL ~ base64:', base64);
+  const {
+    metadata: { height, width },
+    ...plaiceholder
+  } = await getPlaiceholder(buffer, { size: 10 });
 
-    return base64;
-  } catch (err) {
-    console.error(err);
-    return '';
-  }
+  return {
+    ...plaiceholder,
+    img: { src, height, width },
+  };
 };
