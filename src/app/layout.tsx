@@ -4,14 +4,12 @@ import ThemeProvider from '@components/ThemeProvider/ThemeProvider';
 import Header from '@components/Header/Header';
 import './globals.scss';
 
-// 英文字體
 const enFont = localFont({
   src: './fonts/PTSans-Regular.ttf',
   display: 'swap',
   variable: '--font-roboto',
 });
 
-// 中文字體
 const chineseFont = localFont({
   src: './fonts/LXGWWenKaiTC-Regular.ttf',
   display: 'swap',

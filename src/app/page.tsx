@@ -16,6 +16,9 @@ export default async function Home () {
       <Photo src={src} width={100} height={100} alt="Profile picture" blurDataURL={base64} placeholder="blur" />
       <Photo src="/images/profile.png" width={100} height={100} alt="Profile picture" />
       <ProfileCard />
+      <h1>主標題</h1>
+      <h2>置中的副標題</h2>
+      <p>次要文字段落</p>
     </div>
   );
 }
