@@ -36,11 +36,11 @@ const nextConfig = {
     images: {
         localPatterns: [
             {
-                pathname: '/public/icons/**',
+                pathname: '/icons/**',
                 search: ''
             },
             {
-                pathname: '/src/stories/assets/**',
+                pathname: '/images/**',
                 search: ''
             }
         ],
