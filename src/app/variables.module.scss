@@ -43,13 +43,11 @@ $text-primary: #1a1d1d;
 $text-secondary: #5e6666;
 $text-tertiary: #7a8484;
 $text-disabled: #a5acac;
-$text-inverse: #f8fafa;
 
 $text-primary-dark: #f8fafa;
 $text-secondary-dark: #a5acac;
 $text-tertiary-dark: #7a8484;
 $text-disabled-dark: #5e6666;
-$text-inverse-dark: #1a1d1d;
 
 $border-light: #e5e7eb;
 $border-default: #d1d5db;
@@ -168,9 +166,11 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
 @mixin theme-property($property, $light-value, $dark-value) {
     #{$property}: $light-value;
-
-    [data-theme='dark'] {
-        #{$property}: $dark-value;
+    
+    :global {
+        [data-theme='dark'] & {
+            #{$property}: $dark-value;
+        }
     }
 }
 

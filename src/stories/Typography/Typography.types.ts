@@ -2,7 +2,7 @@ import { HTMLAttributes } from 'react';
 
 export type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'a' | 'caption' | 'small';
 
-export type TypographyWeight = 'bold' | 'semibold' | 'regular';
+export type TypographyWeight = 'regular' | 'bold';
 
 export type TypographyColor =
   | 'primary'
@@ -11,7 +11,6 @@ export type TypographyColor =
   | 'textSecondary'
   | 'textTertiary'
   | 'textDisabled'
-  | 'textInverse'
   | 'success'
   | 'warning'
   | 'error';

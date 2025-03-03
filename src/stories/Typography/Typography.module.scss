@@ -1,6 +1,5 @@
 @use 'variables.module.scss' as *;
 
-//TODO: theme-property
 .primary {
 	color: $primary-lightest;
 }
@@ -10,23 +9,19 @@
 }
 
 .textPrimary {
-	color: $text-primary;
+	@include theme-property(color, $text-primary, $text-primary-dark);
 }
 
 .textSecondary {
-	color: $text-secondary;
+	@include theme-property(color, $text-secondary, $text-secondary-dark);
 }
 
 .textTertiary {
-	color: $text-tertiary;
+	@include theme-property(color, $text-tertiary, $text-tertiary-dark);
 }
 
 .textDisabled {
-	color: $text-disabled;
-}
-
-.textInverse {
-	color: $text-inverse;
+	@include theme-property(color, $text-disabled, $text-disabled-dark);
 }
 
 .success {

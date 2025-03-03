@@ -25,7 +25,6 @@ const meta = {
         'textSecondary',
         'textTertiary',
         'textDisabled',
-        'textInverse',
         'success',
         'warning',
         'error',
@@ -35,7 +34,7 @@ const meta = {
     weight: {
       type: 'string',
       control: 'select',
-      options: ['bold', 'semibold', 'regular'],
+      options: ['bold', 'regular'],
       description: 'Weight of the typography',
     },
     children: {

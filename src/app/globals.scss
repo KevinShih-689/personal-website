@@ -3,7 +3,6 @@
 :root {
   --font-family: var(--font-roboto), var(--font-noto-tc), sans-serif;
   --font-weight-regular: 400;
-  --font-weight-semibold: 600;
   --font-weight-bold: 700;
   font-size: 16px;
 
@@ -96,11 +95,6 @@ small {
   &-bold {
     font-weight: var(--font-weight-bold);
   }
-
-  &-semibold {
-    font-weight: var(--font-weight-semibold);
-  }
-
   &-regular {
     font-weight: var(--font-weight-regular);
   }
