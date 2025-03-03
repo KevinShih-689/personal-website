@@ -1,6 +1,7 @@
 import ProfileCard from '@components/ProfileCard/ProfileCard';
 import styles from './page.module.scss';
 import Photo from '@components/Photo/Photo';
+import Typography from '@components/Typography/Typography';
 import { getImage } from '@lib/common/imageUtils';
 
 export default async function Home () {
@@ -16,6 +17,9 @@ export default async function Home () {
       <Photo src={src} width={100} height={100} alt="Profile picture" blurDataURL={base64} placeholder="blur" />
       <Photo src="/images/profile.png" width={100} height={100} alt="Profile picture" />
       <ProfileCard />
+      <Typography variant="h1" weight="bold">
+        主標題
+      </Typography>
       <h1>主標題</h1>
       <h2>置中的副標題</h2>
       <p>次要文字段落</p>

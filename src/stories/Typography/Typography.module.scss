@@ -1,0 +1,45 @@
+@use 'variables.module.scss' as *;
+
+.typography {
+
+}
+
+.primary {
+	color: $primary-lightest;
+}
+
+.secondary {
+	color: $secondary-lightest;
+}
+
+.textPrimary {
+	color: $text-primary;
+}
+
+.textSecondary {
+	color: $text-secondary;
+}
+
+.textTertiary {
+	color: $text-tertiary;
+}
+
+.textDisabled {
+	color: $text-disabled;
+}
+
+.textInverse {
+	color: $text-inverse;
+}
+
+.success {
+	color: $success;
+}
+
+.warning {
+	color: $warning;
+}
+
+.error {
+	color: $error;
+}
