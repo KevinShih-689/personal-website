@@ -1,6 +1,6 @@
-import styles from './Typography.module.scss';
-import { TypographyProps, TypographyVariant } from './Typography.types';
 import { createElement } from 'react';
+import { TypographyProps, TypographyVariant } from './Typography.types';
+import styles from './Typography.module.scss';
 
 export default function Typography ({
   variant,

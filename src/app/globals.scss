@@ -18,11 +18,11 @@
 
 html {
   --background: #{$background-light};
-  --foreground: #{$gray-900};
+  --foreground: #{$text-primary};
 
   &[data-theme='dark'] {
     --background: #{$background-dark};
-    --foreground: #{$gray-50};
+    --foreground: #{$text-primary-dark};
   }
 }
 
