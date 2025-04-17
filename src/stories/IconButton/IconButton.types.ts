@@ -7,4 +7,4 @@ export default interface IconButtonProps extends ButtonHTMLAttributes<HTMLButton
   color?: 'info' | 'primary' | 'success' | 'warning' | 'error';
   /** Icon to display */
   children: ReactNode;
-};;;;;;;;;;
+}

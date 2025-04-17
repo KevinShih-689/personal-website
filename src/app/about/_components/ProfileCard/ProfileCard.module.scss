@@ -1,9 +1,8 @@
 @use "variables.module.scss" as *;
 
-.profile_card {
+.tilt {
     @include common-padding();
     @include common-border();
-    @include common-margin();
     background-color: $secondary-lightest;
     color: $primary-lightest;
     max-width: 800px;
@@ -13,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     :global {
         [data-theme='dark'] & {
             background-color: $gray-200;
@@ -20,3 +20,26 @@
         }
     }
 }
+
+.header {
+    flex: 0.5;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.content {
+    flex: 9.5;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    .left {
+        flex: 3;
+    }
+    .right {
+        flex: 7;
+    }
+}
+

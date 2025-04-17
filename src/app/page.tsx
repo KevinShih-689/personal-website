@@ -1,4 +1,3 @@
-import ProfileCard from '@components/ProfileCard/ProfileCard';
 import styles from './page.module.scss';
 import Photo from '@components/Photo/Photo';
 import Typography from '@components/Typography/Typography';
@@ -16,7 +15,6 @@ export default async function Home () {
     <div className={styles.home}>
       <Photo src={src} width={100} height={100} alt="Profile picture" blurDataURL={base64} placeholder="blur" />
       <Photo src="/images/profile.png" width={100} height={100} alt="Profile picture" />
-      <ProfileCard />
       <Typography variant="h1" weight="bold">
         主標題
       </Typography>

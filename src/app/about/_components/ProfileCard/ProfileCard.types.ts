@@ -1,4 +1,4 @@
-export default interface ProfileCardProps {
+export interface ProfileCardProps {
   /** List of social media links */
   socialList?: Array<{
     type: string;
@@ -16,4 +16,4 @@ export default interface ProfileCardProps {
   picture?: string;
   /** Handler for download action */
   onDownload?: () => void;
-};;;;;;;;;;
+}
