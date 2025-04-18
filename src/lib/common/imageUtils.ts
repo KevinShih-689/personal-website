@@ -8,7 +8,7 @@ type GetImageType = {
   src: string;
 };
 
-type ImageResponse = GetPlaiceholderReturn & {
+export type ImageResponse = GetPlaiceholderReturn & {
   img: {
     src: string;
     height: number;
@@ -26,6 +26,10 @@ export const getImage = async ({ src }: GetImageType): Promise<ImageResponse> =>
 
   return {
     ...plaiceholder,
-    img: { src, height, width },
+    img: {
+      src,
+      height,
+      width,
+    },
   };
 };

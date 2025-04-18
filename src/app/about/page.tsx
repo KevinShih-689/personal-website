@@ -2,7 +2,7 @@ import Typography from '@components/Typography/Typography';
 import ProfileCard from './_components/ProfileCard/ProfileCard';
 import styles from './styles.module.scss';
 
-export default function About () {
+export default async function About () {
   return (
     <div>
       <section id="home" className={styles.section}>

@@ -1,24 +1,24 @@
-'use client';
+import { getImage, ImageResponse } from '@lib/common/imageUtils';
+import ProfileCardHeader from './ProfileCardHeader';
+import Photo from '@components/Photo/Photo';
 
-import { Tilt } from '@jdion/tilt-react';
-import IconButton from '@components/IconButton/IconButton';
-import DownloadIcon from '@icons/download.svg';
-import ImageComponent from './Image';
 import { ProfileCardProps } from './ProfileCard.types';
 import styles from './ProfileCard.module.scss';
 
-export default function ProfileCard ({}: ProfileCardProps) {
+export default async function ProfileCard ({}: ProfileCardProps) {
+  const { img, base64 }: ImageResponse = await getImage({
+    src: 'https://avatars.githubusercontent.com/u/78122777?s=300&u=7675d6714c1d4fa2be2270c7c397a675842fc274&v=4',
+  });
+
   return (
-    <Tilt className={styles.tilt}>
-      <div className={styles.header}>
-        <IconButton color="primary" onClick={() => console.log('clicked')}>
-          <DownloadIcon fill="currentColor" />
-        </IconButton>
-      </div>
+    <div className={styles.tilt}>
+      <ProfileCardHeader />
       <div className={styles.content}>
-        <ImageComponent />
+        <div className={styles.left}>
+          <Photo {...img} blurDataURL={base64} alt="Profile picture" placeholder="blur" />
+        </div>
         <div className={styles.right}></div>
       </div>
-    </Tilt>
+    </div>
   );
 }
