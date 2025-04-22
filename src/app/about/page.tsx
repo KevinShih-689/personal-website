@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 export default async function About () {
   return (
-    <div>
+    <div className={styles.container}>
       <section id="home" className={styles.section}>
         <ProfileCard />
       </section>

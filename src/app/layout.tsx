@@ -11,7 +11,7 @@ const enFont = localFont({
 });
 
 const chineseFont = localFont({
-  src: './fonts/LXGWWenKaiTC-Regular.ttf',
+  src: './fonts/ChocolateClassicalSans-Regular.ttf',
   display: 'swap',
   variable: '--font-noto-tc',
 });
