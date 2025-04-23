@@ -77,21 +77,21 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
 @mixin common-margin {
     margin: 36px 24px; 
-    @include respond-to-mobile {
-      margin: 28px 20px; 
-    }
     @include respond-to-tablet {
-      margin: 20px 16px; 
+			margin: 20px 16px; 
     }
+		@include respond-to-mobile {
+			margin: 28px 20px; 
+		}
 }
 
 @mixin common-padding {
     padding: 24px 16px; 
-    @include respond-to-mobile {
-      padding: 20px 12px; 
-    }
     @include respond-to-tablet {
       padding: 16px 8px; 
+    }
+    @include respond-to-mobile {
+    	padding: 20px 12px; 
     }
 }
 
@@ -166,17 +166,19 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
 }
 
-@mixin theme-property($property, $light-value, $dark-value) {
-    #{$property}: $light-value;
+@mixin theme-property($property, $light-mode-value, $dark-mode-value) {
+    #{$property}: $light-mode-value;
     
     :global {
         [data-theme='dark'] & {
-            #{$property}: $dark-value;
+            #{$property}: $dark-mode-value;
         }
     }
 }
 
 :export {
+    primaryLightest: $primary-lightest;
+    secondaryLightest: $secondary-lightest;
     shadowSm: $shadow-sm;
     shadowMd: $shadow-md;
     shadowLg: $shadow-lg;

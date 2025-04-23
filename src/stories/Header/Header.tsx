@@ -4,10 +4,11 @@ import styles from './Header.module.scss';
 export default function Header () {
   return (
     <div className={styles.header}>
-      <h1>This is header 標題</h1>
-      <a href="#home">首頁</a>
-      <a href="#about">關於我</a>
-      <a href="#collection">作品集</a>
+      <a href="#home">資訊</a>
+      <a href="#about">能力</a>
+      <a href="#projects">專案</a>
+      <a href="#experience">經驗</a>
+      <a href="#contact">聯絡</a>
       <ModeToggle />
     </div>
   );

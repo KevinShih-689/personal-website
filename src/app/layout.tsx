@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import ThemeProvider from '@components/ThemeProvider/ThemeProvider';
+import { ThemeProvider } from 'next-themes';
 import Header from '@components/Header/Header';
 import './globals.scss';
 
@@ -27,7 +27,7 @@ export default function RootLayout ({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-TW" className={`${enFont.variable} ${chineseFont.variable}`}>
+    <html lang="zh-TW" className={`${enFont.variable} ${chineseFont.variable}`} suppressHydrationWarning>
       <body>
         <ThemeProvider enableSystem disableTransitionOnChange>
           <Header />
