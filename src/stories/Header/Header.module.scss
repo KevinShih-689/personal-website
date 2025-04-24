@@ -24,6 +24,6 @@
 
     a {
         font-weight: 600;
-        @include theme-property(color, $primary-lightest, $secondary-lightest);
+        @include theme-property(color, $text-primary, $text-primary-dark);
     }
 }
