@@ -177,8 +177,10 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 :export {
+    secondaryLightest: $secondary-lightest;
     textPrimary: $text-primary;
     textPrimaryDark: $text-primary-dark;
+    gray200: $gray-200;
     shadowSm: $shadow-sm;
     shadowMd: $shadow-md;
     shadowLg: $shadow-lg;
