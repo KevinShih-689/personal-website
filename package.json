@@ -22,6 +22,7 @@
     "next-themes": "^0.4.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-scan": "^0.3.3",
     "sass-loader": "^16.0.4",
     "sharp": "^0.33.5",
     "style-loader": "^4.0.0"

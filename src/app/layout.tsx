@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
 import Header from '@components/Header/Header';
+import ReactScan from '@components/ReactScan/ReactScan';
 import './globals.scss';
 
 const enFont = localFont({
@@ -28,6 +29,7 @@ export default function RootLayout ({
 }>) {
   return (
     <html lang="zh-TW" className={`${enFont.variable} ${chineseFont.variable}`} suppressHydrationWarning>
+      <ReactScan />
       <body>
         <ThemeProvider enableSystem disableTransitionOnChange>
           <Header />
