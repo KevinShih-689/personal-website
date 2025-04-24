@@ -16,7 +16,7 @@ export default function useHeader () {
       threshold: 1.0,
     });
 
-    const handleScroll = () => {
+    const handleScrollEvent = () => {
       const currentScrollY = window.scrollY;
       const isScrollingUp = currentScrollY < lastScrollY.current;
       scrollThrottle(isScrollingUp);
@@ -24,11 +24,11 @@ export default function useHeader () {
     };
 
     if (sentinelRef.current) observer.observe(sentinelRef.current);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScrollEvent);
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScrollEvent);
     };
   }, [scrollThrottle]);
 
