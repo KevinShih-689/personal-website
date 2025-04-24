@@ -1,25 +1,11 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
 import ModeToggle from '@components/ModeToggle/ModeToggle';
+import useHeader from './hooks/useHeader';
 import styles from './Header.module.scss';
 
 export default function Header () {
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const sentinelRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      //TODO: Need to use throttle to prevent too many re-renders
-      ([entry]) => setIsHeaderVisible(entry.isIntersecting),
-      {
-        root: null,
-        threshold: 1.0,
-      }
-    );
-    if (sentinelRef.current) observer.observe(sentinelRef.current);
-    return () => observer.disconnect();
-  }, []);
+  const { sentinelRef, isHeaderVisible } = useHeader();
 
   return (
     <>
