@@ -1,5 +1,10 @@
 @use 'variables.module.scss' as *;
 
+.sentinel {
+    position: absolute;
+    top: 0;
+}
+
 .header {
     @include common-border();
     border-start-start-radius: 0;
@@ -15,6 +20,7 @@
     align-items: center;
     background-color: var(--background-image-color);
     padding: 16px 12px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     @include respond-to-tablet {
         padding: 12px 8px;
     }
@@ -26,4 +32,9 @@
         font-weight: 600;
         @include theme-property(color, $text-primary, $text-primary-dark);
     }
+}
+
+.hidden {
+    transform: translate(-50%, -100%);
+    opacity: 0;
 }
