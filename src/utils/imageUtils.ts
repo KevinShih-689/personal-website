@@ -16,7 +16,7 @@ export type ImageResponse = GetPlaiceholderReturn & {
   };
 };
 
-export const getImage = async ({ src }: GetImageType): Promise<ImageResponse> => {
+export const getImageBase64 = async ({ src }: GetImageType): Promise<ImageResponse> => {
   const buffer = await imageInstance.get(src).then(async (res) => Buffer.from(await res.data));
   const plaiceholder = await getPlaiceholder(buffer, { size: 10 });
 

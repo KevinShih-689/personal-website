@@ -24,7 +24,8 @@
       "@icons/*": ["../public/icons/*"],
       "@middleware/*": ["middleware/*"],
       "@lib/*": ["lib/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@constants/*": ["constants/*"]
     }
   },
   "include": [

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import throttle from '@lib/common/throttle';
+import throttle from '@utils/throttle';
 
 export default function useHeader () {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);

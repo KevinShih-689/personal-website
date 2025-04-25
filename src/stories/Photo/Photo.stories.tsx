@@ -88,15 +88,15 @@ export const RemoteImage: Story = {
   parameters: {
     docs: {
       description: {
-        story: '遠端圖片：從網路加載圖片，使用 getImage 取得圖片的 base64 和圖片尺寸實現圖片預處理',
+        story: '遠端圖片：從網路加載圖片，使用 getImageBase64 取得圖片的 base64 和圖片尺寸實現圖片預處理',
       },
       source: {
         language: 'tsx',
         code: `
           import Photo from '@components/Photo/Photo';
-import { getImage } from '@lib/common/imageUtils';
+import { getImageBase64 } from '@lib/common/imageUtils';
 
-const { base64, img } = await getImage({
+const { base64, img } = await getImageBase64({
   src: 'https://avatars.githubusercontent.com/u/78122777?s=300&u=7675d6714c1d4fa2be2270c7c397a675842fc274&v=4',
 });
 
