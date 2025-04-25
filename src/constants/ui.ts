@@ -25,3 +25,23 @@ export const HEADER_LINKS: { id: number; label: string; href: string }[] = [
     href: 'contact',
   },
 ];
+
+export type MediaQueryType = {
+  query: string;
+  device: 'mobile' | 'tablet' | 'desktop';
+};
+
+export const MEDIA_QUERY: MediaQueryType[] = [
+  {
+    query: '(max-width: 767px)',
+    device: 'mobile',
+  },
+  {
+    query: '(min-width: 768px) and (max-width: 1023px)',
+    device: 'tablet',
+  },
+  {
+    query: '(min-width: 1024px)',
+    device: 'desktop',
+  },
+];

@@ -20,7 +20,9 @@
     "react/no-unescaped-entities": "warn",
     "prefer-const": "warn",
     "quotes": ["warn", "single"],
-    "no-unused-vars": ["warn"],
+    "no-unused-vars": ["warn", {
+      "varsIgnorePattern": "^DeviceType"
+    }],
     "eqeqeq": ["warn"],
     "arrow-parens": ["warn", "always"],
     "space-before-function-paren": ["warn", "always"],
