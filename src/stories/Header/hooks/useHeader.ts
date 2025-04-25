@@ -8,7 +8,7 @@ export default function useHeader () {
 
   const scrollThrottle = throttle<boolean>((isVisible) => {
     setIsHeaderVisible(isVisible);
-  }, 600);
+  }, 400);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => scrollThrottle(entry.isIntersecting), {
