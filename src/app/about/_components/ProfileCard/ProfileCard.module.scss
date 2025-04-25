@@ -1,5 +1,9 @@
 @use "variables.module.scss" as *;
 
+.loader {
+    width: 100%;
+    height: 32px;
+}
 .tilt {
     @include common-padding();
     @include common-border();
