@@ -18,9 +18,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include theme-property(background-color, rgba($secondary-lightest, 0.5), var(--background-image-color));
     padding: 16px 12px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		backdrop-filter: blur(1px);
+    @include theme-property(background-color, rgba($secondary-lightest, 0.5), var(--background-image-color));
     @include respond-to-tablet {
         padding: 12px 8px;
     }
@@ -30,7 +31,15 @@
 
     a {
         font-weight: 600;
+				padding: 12px 8px;
         @include theme-property(color, $text-primary, $text-primary-dark);
+				@include common-border();
+				transition: background-color 0.3s ease, color 0.3s ease;
+				&:hover {
+					background-color: $secondary-lightest;
+					// @include theme-property(background-color, var($background-image-color-dark), $secondary-lightest);
+					@include theme-property(color, $primary-lightest, var(--background));
+				}
     }
 }
 
@@ -54,7 +63,7 @@
 		.line {
 			width: 30px;
 			height: 3px;
-			@include theme-property(background-color, $text-primary, $text-primary-dark);
+			background-color: $secondary-lightest;
 			display: block;
 			margin: 5px auto;
 			-webkit-transition: all 0.3s ease-in-out;

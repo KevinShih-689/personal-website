@@ -17,12 +17,6 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    :global {
-        [data-theme='dark'] & {
-            background-color: $gray-200;
-            color: $text-primary;
-        }
-    }
 }
 
 .header {

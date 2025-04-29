@@ -2,8 +2,8 @@
 
 import ModeToggle from '@components/ModeToggle/ModeToggle';
 import { HEADER_LINKS } from '@constants/index';
-import styles from '../Header.module.scss';
 import useHeader from '../hooks/useHeader';
+import styles from '../Header.module.scss';
 
 export default function Desktop () {
   const { sentinelRef, isHeaderVisible } = useHeader();
