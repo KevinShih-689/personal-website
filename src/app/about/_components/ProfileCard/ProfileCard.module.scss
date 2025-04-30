@@ -7,7 +7,7 @@
 .tilt {
     @include common-padding();
     @include common-border();
-    background-color: $secondary-lightest;
+    @include theme-property(background-color, $secondary-lightest, $primary-lightest);
     color: $primary-lightest;
     max-width: 800px;
     width: 100%;

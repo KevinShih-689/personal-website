@@ -11,7 +11,7 @@ export default function Desktop () {
   return (
     <>
       <div ref={sentinelRef} className={styles.sentinel} />
-      <div className={`${styles.desktop} ${isHeaderVisible ? '' : styles.hidden}`}>
+      <div className={`${styles.desktop} ${isHeaderVisible ? '' : styles['hidden-desktop']}`}>
         {HEADER_LINKS.map(({ label, href }, index) => (
           <>
             <a href={`#${href}`}>{label}</a>

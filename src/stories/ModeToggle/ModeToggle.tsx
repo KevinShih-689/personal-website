@@ -14,7 +14,7 @@ export default function ModeToggle () {
 
   const handleToggle = useCallback(() => setTheme(theme === 'dark' ? 'light' : 'dark'), [theme, setTheme]);
   const iconColor = useMemo(
-    () => (theme === 'dark' ? globalStyles.textPrimaryDark : globalStyles.textPrimary),
+    () => (theme === 'dark' ? globalStyles.secondaryLightest : globalStyles.primaryLightest),
     [theme]
   );
 
@@ -24,7 +24,6 @@ export default function ModeToggle () {
 
   return (
     <>
-      {/* <div className={styles.loader} /> */}
       <IconButton onClick={handleToggle} size="large" color="primary">
         {theme === 'dark' ? <SunIcon fill={iconColor} /> : <MoonIcon fill={iconColor} />}
       </IconButton>
