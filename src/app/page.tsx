@@ -1,43 +1,15 @@
-'use client';
-
-import ProfileCard from '@components/ProfileCard/ProfileCard';
-import IconButton from '@components/IconButton/IconButton';
+import Typography from '@components/Typography/Typography';
 import styles from './page.module.scss';
-import GithubIcon from '@icons/github.svg';
-import LinkedInIcon from '@icons/linkedIn.svg';
-import CakeResumeIcon from '@icons/cakeResume.svg';
 
 export default function Home () {
   return (
     <div className={styles.home}>
-      <ProfileCard />
-      <IconButton
-        onClick={() => {
-          console.log('download');
-        }}
-        color="primary"
-        size="medium"
-      >
-        <GithubIcon fill="currentColor" />
-      </IconButton>
-      <IconButton
-        onClick={() => {
-          console.log('send');
-        }}
-        color="primary"
-        size="medium"
-      >
-        <LinkedInIcon fill="currentColor" />
-      </IconButton>
-      <IconButton
-        onClick={() => {
-          console.log('send');
-        }}
-        color="primary"
-        size="medium"
-      >
-        <CakeResumeIcon fill="currentColor" />
-      </IconButton>
+      <Typography variant="h1" weight="regular">
+        主標題
+      </Typography>
+      <h1>主標題</h1>
+      <h2>置中的副標題</h2>
+      <p>次要文字段落</p>
     </div>
   );
 }

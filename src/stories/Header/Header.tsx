@@ -1,11 +1,12 @@
-import ModeToggle from '@components/ModeToggle/ModeToggle';
-import styles from './Header.module.scss';
+'use client';
+
+import useMediaQuery from '@lib/hooks/useMediaQuery';
+import Desktop from './component/Desktop';
+import Mobile from './component/Mobile';
 
 export default function Header () {
-  return (
-    <div className={styles.header}>
-      <h1>This is header</h1>
-      <ModeToggle />
-    </div>
-  );
+  const device = useMediaQuery();
+  if (!device) return null;
+
+  return <>{device === 'mobile' ? <Mobile /> : <Desktop />}</>;
 }

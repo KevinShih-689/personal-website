@@ -1,5 +1,5 @@
-$primary-lightest: #2b9194;
-$secondary-lightest: #9fc3b7;
+$primary-lightest: #708884;
+$secondary-lightest: #c6c9bd;
 
 $gray-50: #f8fafa;
 $gray-100: #f0f2f2;
@@ -13,7 +13,9 @@ $gray-800: #2d3232;
 $gray-900: #1a1d1d;
 
 $background-dark: #393939;
-$background-light: #f9f9f9;
+$background-image-color-dark: rgba(255, 255, 255, 0.171);
+$background-light: #F0EBE3;
+$background-image-color-light: rgba(54, 54, 54, 0.171);
 
 $success: #2d9d78;
 $success-hover: rgba(45, 157, 120, 0.08);
@@ -43,7 +45,11 @@ $text-primary: #1a1d1d;
 $text-secondary: #5e6666;
 $text-tertiary: #7a8484;
 $text-disabled: #a5acac;
-$text-inverse: #ffffff;
+
+$text-primary-dark: #F0EBE3;
+$text-secondary-dark: #a5acac;
+$text-tertiary-dark: #7a8484;
+$text-disabled-dark: #5e6666;
 
 $border-light: #e5e7eb;
 $border-default: #d1d5db;
@@ -71,21 +77,21 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
 @mixin common-margin {
     margin: 36px 24px; 
-    @include respond-to-mobile {
-      margin: 28px 20px; 
-    }
     @include respond-to-tablet {
-      margin: 20px 16px; 
+			margin: 20px 16px; 
     }
+		@include respond-to-mobile {
+			margin: 28px 20px; 
+		}
 }
 
 @mixin common-padding {
-    padding: 32px 24px; 
-    @include respond-to-mobile {
-      padding: 24px 16px; 
-    }
+    padding: 24px 16px; 
     @include respond-to-tablet {
-      padding: 16px 12px; 
+      padding: 16px 8px; 
+    }
+    @include respond-to-mobile {
+    	padding: 20px 12px; 
     }
 }
 
@@ -160,15 +166,22 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
 }
 
-@mixin theme-property($property, $light-value, $dark-value) {
-    #{$property}: $light-value;
-
-    [data-theme='dark'] {
-        #{$property}: $dark-value;
+@mixin theme-property($property, $light-mode-value, $dark-mode-value) {
+    #{$property}: $light-mode-value;
+    
+    :global {
+        [data-theme='dark'] & {
+            #{$property}: $dark-mode-value;
+        }
     }
 }
 
 :export {
+    primaryLightest: $primary-lightest;
+    secondaryLightest: $secondary-lightest;
+    textPrimary: $text-primary;
+    textPrimaryDark: $text-primary-dark;
+    gray200: $gray-200;
     shadowSm: $shadow-sm;
     shadowMd: $shadow-md;
     shadowLg: $shadow-lg;

@@ -1,0 +1,37 @@
+@use 'variables.module.scss' as *;
+
+.primary {
+	color: $primary-lightest;
+}
+
+.secondary {
+	color: $secondary-lightest;
+}
+
+.textPrimary {
+	@include theme-property(color, $text-primary, $text-primary-dark);
+}
+
+.textSecondary {
+	@include theme-property(color, $text-secondary, $text-secondary-dark);
+}
+
+.textTertiary {
+	@include theme-property(color, $text-tertiary, $text-tertiary-dark);
+}
+
+.textDisabled {
+	@include theme-property(color, $text-disabled, $text-disabled-dark);
+}
+
+.success {
+	color: $success;
+}
+
+.warning {
+	color: $warning;
+}
+
+.error {
+	color: $error;
+}

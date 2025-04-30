@@ -1,18 +1,20 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import ThemeProvider from '@components/ThemeProvider/ThemeProvider';
+import { ThemeProvider } from 'next-themes';
 import Header from '@components/Header/Header';
+import ReactScan from '@components/ReactScan/ReactScan';
 import './globals.scss';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
+const enFont = localFont({
+  src: './fonts/PTSans-Regular.ttf',
+  display: 'swap',
+  variable: '--font-roboto',
 });
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+
+const chineseFont = localFont({
+  src: './fonts/ChocolateClassicalSans-Regular.ttf',
+  display: 'swap',
+  variable: '--font-noto-tc',
 });
 
 export const metadata: Metadata = {
@@ -26,8 +28,9 @@ export default function RootLayout ({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="zh-TW" className={`${enFont.variable} ${chineseFont.variable}`} suppressHydrationWarning>
+      <ReactScan />
+      <body>
         <ThemeProvider enableSystem disableTransitionOnChange>
           <Header />
           {children}
