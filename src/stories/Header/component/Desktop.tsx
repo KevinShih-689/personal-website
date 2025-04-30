@@ -2,11 +2,11 @@
 
 import ModeToggle from '@components/ModeToggle/ModeToggle';
 import { HEADER_LINKS } from '@constants/index';
-import useHeader from '../hooks/useHeader';
+import useDesktopHeader from '../hooks/useDesktopHeader';
 import styles from '../Header.module.scss';
 
 export default function Desktop () {
-  const { sentinelRef, isHeaderVisible } = useHeader();
+  const { sentinelRef, isHeaderVisible } = useDesktopHeader();
 
   return (
     <>

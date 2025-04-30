@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import throttle from '@utils/throttle';
 
-export default function useHeader () {
+export default function useDesktopHeader () {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const sentinelRef = useRef<HTMLDivElement>(null);
   const lastScrollY = useRef(0);

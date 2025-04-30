@@ -1,34 +1,35 @@
 'use client';
 
-import { useState } from 'react';
+import { memo } from 'react';
 import ModeToggle from '@components/ModeToggle/ModeToggle';
 import { HEADER_LINKS } from '@constants/index';
+import useMobileHeader from '../hooks/useMobileHeader';
 import styles from '../Header.module.scss';
 
 export default function Mobile () {
-  const [isActive, setIsActive] = useState(false);
+  const { isOpen, handleSwitch } = useMobileHeader();
   return (
     <div className={styles.mobile}>
-      <Hamburger {...{ isActive, handleSwitch: () => setIsActive(!isActive) }} />
+      <Hamburger {...{ isOpen, handleSwitch }} />
       <ModeToggle />
-      <Menu {...{ isActive }} />
+      <Menu isOpen={isOpen} />
     </div>
   );
 }
 
-function Hamburger ({ isActive, handleSwitch }: { isActive: boolean; handleSwitch: () => void }) {
+const Hamburger = memo(({ isOpen, handleSwitch }: { isOpen: boolean; handleSwitch: () => void }) => {
   return (
-    <div className={`${styles.hamburger} ${isActive ? styles['is-active'] : ''}`} onClick={handleSwitch}>
+    <div className={`${styles.hamburger} ${isOpen ? styles['is-open'] : ''}`} onClick={handleSwitch}>
       <span className={styles.line}></span>
       <span className={styles.line}></span>
       <span className={styles.line}></span>
     </div>
   );
-}
+});
 
-function Menu ({ isActive }: { isActive: boolean }) {
+const Menu = memo(({ isOpen }: { isOpen: boolean }) => {
   return (
-    <div className={`${styles.menu} ${isActive ? '' : styles['hidden-mobile']}`}>
+    <div className={`${styles.menu} ${isOpen ? '' : styles['hidden-mobile']}`}>
       {HEADER_LINKS.map(({ id, label, href }) => (
         <a key={id} href={`#${href}`}>
           {label}
@@ -36,4 +37,7 @@ function Menu ({ isActive }: { isActive: boolean }) {
       ))}
     </div>
   );
-}
+});
+
+Hamburger.displayName = 'Hamburger';
+Menu.displayName = 'Menu';
