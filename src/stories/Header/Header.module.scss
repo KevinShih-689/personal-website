@@ -21,7 +21,7 @@
     padding: 16px 12px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 		backdrop-filter: blur(1px);
-    @include theme-property(background-color, rgba($secondary-lightest, 0.5), var(--background-image-color));
+		background-color: rgba($secondary-lightest, 0.5);
     @include respond-to-tablet {
         padding: 12px 8px;
     }
@@ -37,8 +37,7 @@
 				transition: background-color 0.3s ease, color 0.3s ease;
 				&:hover {
 					background-color: $secondary-lightest;
-					// @include theme-property(background-color, var($background-image-color-dark), $secondary-lightest);
-					@include theme-property(color, $primary-lightest, var(--background));
+					color: $primary-lightest;
 				}
     }
 }
