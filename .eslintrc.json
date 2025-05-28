@@ -1,31 +1,28 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript",
-    "plugin:storybook/recommended",
-    "prettier"
-  ],
-  "ignorePatterns": [
-    ".config/*",
-    "dist/*"
-  ],
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:storybook/recommended", "prettier"],
+  "ignorePatterns": [".config/*", "dist/*"],
   "rules": {
-    "max-len": ["warn", { 
-      "code": 120,
-      "ignoreComments": true,
-      "ignoreUrls": true,
-      "ignoreStrings": true,
-      "ignoreTemplateLiterals": true
-    }],
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
     "react/no-unescaped-entities": "warn",
     "prefer-const": "warn",
     "quotes": ["warn", "single"],
-    "no-unused-vars": ["warn", {
-      "varsIgnorePattern": "^DeviceType"
-    }],
+    "no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "^DeviceType"
+      }
+    ],
     "eqeqeq": ["warn"],
     "arrow-parens": ["warn", "always"],
-    "space-before-function-paren": ["warn", "always"],
     "no-trailing-spaces": ["warn"],
     "eol-last": ["warn", "always"],
     "no-var": ["warn"],
